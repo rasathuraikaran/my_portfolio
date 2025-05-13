@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Karan Rasathurai - Portfolio
 
 Welcome to my professional portfolio website! This single-page application showcases my skills, experience, projects, and provides a way to get in touch with me.
@@ -101,3 +102,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 Designed and developed by Karan Rasathurai
+=======
+# my-portfolio
+>>>>>>> 0298267c11b49c3a288ca19345b314c1802b183e
