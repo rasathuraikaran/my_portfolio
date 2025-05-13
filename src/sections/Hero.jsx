@@ -73,15 +73,14 @@ const Hero = () => {
                 Get In Touch
               </motion.a>
               <motion.a
-                href="/resume.pdf"
-                download
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center bg-white hover:bg-gray-50 border-2 border-gray-200 text-gray-700 hover:text-gray-900 font-medium py-3 px-6 rounded-lg transition-all shadow-sm hover:shadow"
-              >
-                <FiDownload className="w-5 h-5 mr-2" />
-                Download CV
-              </motion.a>
+  href="https://rasathuraikaran.github.io/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center bg-white hover:bg-gray-50 border-2 border-gray-200 text-gray-700 hover:text-gray-900 font-medium py-3 px-6 rounded-lg transition-all shadow-sm hover:shadow"
+>
+  <FiDownload className="w-5 h-5 mr-2" />
+  Download CV
+</motion.a>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start space-x-5">
