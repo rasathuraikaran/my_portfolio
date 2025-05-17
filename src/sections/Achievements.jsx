@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ach1 from '../assets/ach1.jpeg';
-import ach2 from '../assets/ach2.jpg';
+const ach1 = '/images/achievements/ach1.jpeg';
+const ach2 = '/images/achievements/ach2.jpg';
 
 export const achievements = [
   {
