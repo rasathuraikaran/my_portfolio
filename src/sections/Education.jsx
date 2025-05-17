@@ -11,7 +11,7 @@ const education = [
     description: [
       'GPA: 3.65/4.0',
       'Relevant Coursework: Data Structures & Algorithms, Database Systems, Software Engineering, Computer Networks, Web Development, Machine Learning',
-      'Thesis: "Road Accident Detection And Notification System" - Developed a real-time accident detection system using IoT and mobile technologies.'
+      'The Faculty of Engineering, University of Peradeniya, is a government-funded institution where admission is based on G.C.E. A/L Z-scores in the Physical Science stream. The UGC selects students through a merit-based system, offering free education. After a common first-year curriculum, students choose their engineering discipline based on performance and preference.'
     ]
   },
   {

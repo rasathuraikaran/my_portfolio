@@ -4,19 +4,19 @@ const skills = [
   {
     category: 'Languages',
     items: [
-      { name: 'Java', level: 90 },
+      { name: 'Java', level: 95 },
       { name: 'Dart', level: 85 },
       { name: 'Python', level: 80 },
-      { name: 'JavaScript', level: 85 },
+      { name: 'JavaScript', level: 70 },
       { name: 'HTML/CSS', level: 90 },
-      { name: 'PHP', level: 75 },
-      { name: 'C', level: 70 },
+      { name: 'PHP', level: 70 },
+      { name: 'C', level: 80 },
     ]
   },
   {
     category: 'Frameworks',
     items: [
-      { name: 'Spring/Spring Boot', level: 90 },
+      { name: 'Spring/Spring Boot', level: 95 },
       { name: 'Flutter', level: 85 },
       { name: 'ReactJS', level: 80 },
       { name: 'Laravel', level: 75 },

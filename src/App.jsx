@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Routes, Route, useParams } from 'react-router-dom';
+import ProjectDetails from './components/ProjectDetails';
+import AchievementDetails from './components/AchievementDetails';
 import { FiGithub, FiLinkedin, FiMail, FiPhone, FiGlobe } from 'react-icons/fi';
 import { FaStackOverflow } from 'react-icons/fa';
 import { SiMedium } from 'react-icons/si';
@@ -8,62 +11,49 @@ import About from './sections/About';
 import Experience from './sections/Experience';
 import Education from './sections/Education';
 import Projects from './sections/Projects';
+import { achievements } from './sections/Achievements';
 import Achievements from './sections/Achievements';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Articles from './components/Articles';
+import Gallery from './components/Gallery';
 import Footer from './components/Footer';
-
+import Loading from './components/Loading';
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        backgroundColor: '#f8fafc',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{
-            width: '64px',
-            height: '64px',
-            border: '4px solid #2563eb',
-            borderTopColor: 'transparent',
-            borderRadius: '50%',
-            animation: 'spin 1s linear infinite',
-            margin: '0 auto 16px'
-          }}></div>
-          <p style={{ fontSize: '18px', color: '#1e293b' }}>Loading Portfolio...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-white">
       <Navbar />
-      <main className="w-full">
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Articles />
-        <Education />
-<Achievements />
-        <Contact />
-      </main>
+      <Loading>
+        <Routes>
+          <Route path="/" element={
+            <main className=" w-full">
+               <Hero />
+               <About />
+               <Experience />
+               <Education />
+               <Gallery />
+               <Projects />
+               <Achievements />
+               <Skills />
+               <Articles />
+              <Hero />
+              <About />
+              <Experience />
+              <Education />
+              <Articles />
+              <Projects />
+              <Achievements />
+              <Skills />
+              <Contact />
+             
+            </main>
+          } />
+          <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/achievements/:id" element={
+            <AchievementDetails achievement={achievements[parseInt(useParams().id) - 1]} />
+          } />
+        </Routes>
+      </Loading>
       <Footer />
     </div>
   );

@@ -13,7 +13,7 @@ const experiences = [
       'Developed a robust data-saving package enabling seamless integration across multiple databases using DBLink.',
       'Integrated REST API calls and XML processing within components to enhance data exchange and interaction.',
       'Conducted thorough smoke and performance tests to ensure software reliability, stability, and efficiency.',
-      'Optimized the statement sender module, improving execution time by 60% through the efficient use of Java’s Parallel Stream API.',
+      'Optimized the statement sender module, improving execution time by 60% through the efficient use of Java Parallel Stream API.',
       'Enhanced the Master Service for client-side data retrieval by implementing GraphQL queries and mutations.'
     ]
   },
@@ -39,6 +39,19 @@ const experiences = [
       'Implemented microservices communication using the Feign client to enhance service interoperability.',
       'Enhanced security measures by integrating multifactor authentication.',
       'Conducted unit tests for Authentication service using JUnit and Mockito frameworks.'
+    ]
+  },
+  {
+    id: 4,
+    role: 'Teaching Assistant',
+    company: 'University of Peradeniya',
+    location: 'Kandy, Sri Lanka',
+    duration: 'Oct 2022 - Aug 2023',
+    description: [
+      'Supervised weekly 2-hour lab sessions for CO226: Database Systems and CO222: Programming Methodology courses',
+      'Created questions for online quizzes based on the C programming language',
+      'Conducted one-on-one tutoring sessions to help students understand programming methodology concepts',
+      'Developed teaching materials and provided feedback on student assignments'
     ]
   }
 ];
