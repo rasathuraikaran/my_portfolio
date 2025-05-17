@@ -8,6 +8,7 @@ import About from './sections/About';
 import Experience from './sections/Experience';
 import Education from './sections/Education';
 import Projects from './sections/Projects';
+import Achievements from './sections/Achievements';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Articles from './components/Articles';
@@ -60,6 +61,7 @@ function App() {
         <Projects />
         <Articles />
         <Education />
+<Achievements />
         <Contact />
       </main>
       <Footer />

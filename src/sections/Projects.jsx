@@ -4,8 +4,11 @@ import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
 import project4 from '../assets/project4.jpeg';
+import project5 from '../assets/project5.jpeg';
 
 const projects = [
+ 
+
   {
     id: 1,
     title: 'Road Accident Detection And Notification System',
@@ -27,22 +30,31 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Cake Order App',
+    title: 'Cake Order App-CakeDa',
     description: 'Developed an individual mobile app project aimed at encouraging indoor cake makers to sell their cakes. The app provides a convenient way for customers to purchase cakes from indoor cake makers. App was deployed in the Play Store.',
     technologies: ['Flutter', 'Firebase'],
     github: 'https://github.com/rasathuraikaran/CakeOrderApp',
     demo: 'https://play.google.com/store/apps/details?id=com.academind.CakeDA',
-    image: project3
+    image: project4
   },
   {
     id: 4,
     title: 'Smart Inventory Management',
-    description: 'Contributed to the development of the components page, email sending system, and management of multiple roles, permissions, and dashboard.',
+    description: 'Contributed to the development of the components page, email sending system, and management of multiple roles, permissions , and dashboard.',
     technologies: ['Laravel', 'PHP', 'MySQL', 'HTML', 'Bootstrap', 'CSS'],
     github: 'https://github.com/cepdnaclk/e18-co227-Smart-Inventory-Management-System-Group-C',
     demo: 'https://cepdnaclk.github.io/e18-co227-Smart-Inventory-Management-System-Group-C/',
-    image: project4
-  }
+    image: project3
+  },
+  {
+    id: 5,
+    title: 'GTN WISE BOT',
+    description: `A two-week project for the GTN competition—a chatbot enhanced with AI to deliver responses from a dataset. Seven independent bots were developed, covering areas from App support to DevOps. Our team secured 2nd place, and I contributed to both technical and development aspects.\n\nI built the UI using Streamlit, integrated LangChain components (file loaders for CSV, Excel, PDF, TXT), deployed Chroma DB on AWS EC2 (Docker), and managed datasets with distinct collections. Used ConversationalRetrievalQA for database retrieval and OpenAI for responses, with memory integration for chat context. The app was hosted publicly on AWS EC2, and we implemented independent user sessions.`,
+    technologies: ['Python', 'Streamlit', 'LangChain', 'Chroma DB', 'AWS EC2', 'Docker', 'OpenAI API'],
+    github: '',
+    demo: '',
+    image: project5 // Change to actual image if available
+  },
 ];
 
 const ProjectCard = ({ project }) => {
@@ -52,7 +64,7 @@ const ProjectCard = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 max-w-md w-full mx-auto"
     >
       <div className="h-48 bg-gray-200 overflow-hidden">
         <img 
@@ -64,7 +76,6 @@ const ProjectCard = ({ project }) => {
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
         <p className="text-gray-600 mb-4">{project.description}</p>
-        
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech, index) => (
             <span 
@@ -75,16 +86,17 @@ const ProjectCard = ({ project }) => {
             </span>
           ))}
         </div>
-        
         <div className="flex space-x-4 mt-4">
-          <a 
-            href={project.github} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center text-gray-600 hover:text-primary transition-colors"
-          >
-            <FiGithub className="mr-1" /> Code
-          </a>
+          {project.github && (
+            <a 
+              href={project.github} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center text-gray-600 hover:text-primary transition-colors"
+            >
+              <FiGithub className="mr-1" /> Code
+            </a>
+          )}
           {project.demo && (
             <a 
               href={project.demo} 
@@ -95,6 +107,16 @@ const ProjectCard = ({ project }) => {
               <FiExternalLink className="mr-1" /> Live Demo
             </a>
           )}
+          {project.youtube && (
+            <a 
+              href={project.youtube} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center text-gray-600 hover:text-primary transition-colors"
+            >
+              <FiExternalLink className="mr-1" /> YouTube
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
@@ -103,27 +125,12 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="section bg-gray-50">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of my recent projects. Each project was built to solve a specific problem and improve my skills.
-          </p>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+    <section className="py-14 px-4 max-w-7xl mx-auto bg-gradient-to-br from-indigo-50 to-white rounded-3xl shadow-lg">
+      <h2 className="text-4xl font-extrabold mb-10 text-center text-indigo-700 tracking-wide drop-shadow-lg">Projects</h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </section>
   );
