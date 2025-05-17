@@ -6,10 +6,9 @@
   "homepage": "https://rasathuraikaran.github.io/my-portfolio",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
-    "build:win": "npx vite build",
-    "preview": "vite preview",
-    "vercel-build": "npm run build:win"
+    "build": "vite build",
+    "vercel-build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",
