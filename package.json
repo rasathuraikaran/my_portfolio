@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "vercel-build": "npm run build",
+    "vercel-postinstall": "npm install"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",
