@@ -30,20 +30,13 @@ function App() {
                <Hero />
                <About />
                <Experience />
+               <Articles />
                <Education />
                <Gallery />
                <Projects />
                <Achievements />
                <Skills />
-               <Articles />
-              <Hero />
-              <About />
-              <Experience />
-              <Education />
-              <Articles />
-              <Projects />
-              <Achievements />
-              <Skills />
+           
               <Contact />
              
             </main>

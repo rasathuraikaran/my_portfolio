@@ -66,10 +66,10 @@ const Articles = () => (
       >
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">My Medium Journey</h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Sharing insights on tech, finance, and life with over 4,200 followers. Daily articles about Java, Spring Boot, cloud technologies, and more.
+          Sharing insights on tech, finance, and life with over 4,300 followers. Daily articles about Java, Spring Boot, cloud technologies, and more.
         </p>
         <div className="flex justify-center items-center gap-4 mb-8">
-          <span className="text-4xl md:text-5xl font-bold text-indigo-600">4,200+ followers</span>
+          <span className="text-4xl md:text-5xl font-bold text-indigo-600">4,300+ followers</span>
           <SiMedium className="text-4xl text-indigo-600" />
         </div>
         <a 

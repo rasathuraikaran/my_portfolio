@@ -1,28 +1,56 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const images = [
-  {
-    id: 1,
-    src: '/public/images/achievements/ach1.jpeg',
-    title: '2nd runner-up of GTN AIvolution competition'
-  },
-  {
-    id: 2,
-    src: '/public/images/achievements/ach2.jpg',
-    title: 'Winners of ACES Hackfest'
-  },
-  {
-    id: 3,
-    src: '/public/images/achievements/ach3.jpg',
-    title: 'Achievement 3'
-  },
-  {
-    id: 4,
-    src: '/public/images/achievements/ach4.jpg',
-    title: 'Achievement 4'
-  }
-];
+
+  const images = [
+    {
+      id: 1,
+      src: '/public/images/achievements/ach1.jpeg',
+      title: '2nd Runner-Up – GTN AIvolution Competition'
+    },
+    {
+      id: 2,
+      src: '/public/images/achievements/ach2.jpg',
+      title: 'Champions – ACES Hackfest'
+    },
+    {
+      id: 3,
+      src: '/public/images/achievements/hackthon.jpg',
+      title: 'Champions – ACES Hackathon'
+    },
+    {
+      id: 4,
+      src: '/public/images/achievements/explanation.jpg',
+      title: 'Explaining Computer Engineering & Its Scope to school students'
+    },
+    {
+      id: 5,
+      src: '/public/images/achievements/google.jpg',
+      title: 'Attended Google Developer Meetup'
+    },
+    {
+      id: 6,
+      src: '/public/images/achievements/precoders.jpg',
+      title: '8th Place – Precoders Event by Percom (Qualified for Coders Finals)'
+    },
+    {
+      id: 7,
+      src: '/public/images/achievements/coders.jpg',
+      title: '12th Place – Coders Event by Percom '
+    },
+    {
+      id: 8,
+      src: '/public/images/achievements/GTNwisebot.jpg',
+      title: '2nd Runner-Up – GTN Tech AI Competition'
+    },
+    {
+      id: 9,
+      src: '/public/images/achievements/volleyball.jpg',
+      title: 'Volleyball Champions – Captain of Engineering Tamil Faculty Team (Pera)'
+    }
+  ];
+  
+
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
