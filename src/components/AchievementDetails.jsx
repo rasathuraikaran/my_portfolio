@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
+import { useParams } from 'react-router-dom';
+import { achievements } from '../sections/Achievements';
 
 const AchievementDetails = () => {
   const { id } = useParams();

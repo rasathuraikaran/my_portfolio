@@ -14,6 +14,7 @@ import Projects from './sections/Projects';
 import { achievements } from './sections/Achievements';
 import Achievements from './sections/Achievements';
 import Skills from './sections/Skills';
+import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import Articles from './components/Articles';
 import Gallery from './components/Gallery';
@@ -36,6 +37,8 @@ function App() {
                <Projects />
                <Achievements />
                <Skills />
+              <Certifications />
+      
            
               <Contact />
              

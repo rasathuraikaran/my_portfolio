@@ -86,36 +86,8 @@ const Education = () => {
             ))}
           </div>
 
-          {/* Certifications */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-16"
-          >
-            <h3 className="text-2xl font-semibold text-center text-gray-800 mb-8">Certifications</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                'Problem solving basic - HackerRank',
-                'Java - HackerRank',
-                'Supervised Machine Learning - Coursera',
-                'Springboot - Amigoscode',
-                'Google Kick Start Participant',
-                'AWS Cloud Practitioner (In Progress)'
-              ].map((cert, index) => (
-                <div 
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start"
-                >
-                  <svg className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-gray-700">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+         
+         
         </motion.div>
       </div>
     </section>
