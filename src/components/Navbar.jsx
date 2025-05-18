@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -61,6 +62,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+
           </div>
 
           {/* Mobile menu button */}

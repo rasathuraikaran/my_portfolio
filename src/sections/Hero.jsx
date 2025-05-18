@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
-import { FaStackOverflow } from 'react-icons/fa';
-import { SiMedium } from 'react-icons/si';
+import { FaStackOverflow, FaCoffee } from 'react-icons/fa';
+import { SiMedium, SiLeetcode } from 'react-icons/si';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import profileImage from '../assets/karan.jpeg';
 
 const Hero = () => {
@@ -26,6 +27,26 @@ const Hero = () => {
       url: 'https://rasathuraikaran26.medium.com/',
       label: 'Medium',
     },
+    {
+      icon: <FaInstagram className="w-5 h-5" />,
+      url: 'https://www.instagram.com/karan_s_r_/',
+      label: 'Instagram',
+    },
+    {
+      icon: <FaFacebook className="w-5 h-5" />,
+      url: 'https://www.facebook.com/rasathurai.karan.1/',
+      label: 'Facebook',
+    },
+    {
+      icon: <SiLeetcode className="w-5 h-5" />,
+      url: 'https://leetcode.com/u/rasathuraikaran26/',
+      label: 'LeetCode',
+    },
+     {
+              icon: <FaCoffee className="w-5 h-5" />,
+              url: 'https://buymeacoffee.com/rasathuraikaran',
+              label: 'Buy Me a Coffee',
+            },
   ];
 
   return (
@@ -65,7 +86,11 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
               <motion.a
-                href="#contact"
+                href="javascript:void(0)"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium py-3.5 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl"

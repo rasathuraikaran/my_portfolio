@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiArrowUp, FiPhone } from 'react-icons/fi';
-import { FaStackOverflow } from 'react-icons/fa';
-import { SiMedium } from 'react-icons/si';
+import { FaStackOverflow, FaInstagram, FaFacebook, FaCoffee } from 'react-icons/fa';
+import { SiMedium, SiLeetcode } from 'react-icons/si';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
@@ -15,32 +15,52 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    {
-      icon: <FiGithub className="w-5 h-5" />,
-      url: 'https://github.com/rasathuraikaran',
-      label: 'GitHub',
-    },
-    {
-      icon: <FiLinkedin className="w-5 h-5" />,
-      url: 'https://linkedin.com/in/yourusername',
-      label: 'LinkedIn',
-    },
-    {
-      icon: <FaStackOverflow className="w-5 h-5" />,
-      url: 'https://stackoverflow.com/users/14732792/rasathurai-karan',
-      label: 'Stack Overflow',
-    },
-    {
-      icon: <SiMedium className="w-5 h-5" />,
-      url: 'https://medium.com/@rasathuraikaran26',
-      label: 'Medium (4,000+ readers)',
-    },
-    {
-      icon: <FiMail className="w-5 h-5" />,
-      url: 'mailto:rasathuraikaran26@gmail.com',
-      label: 'Email',
-    },
-  ];
+     {
+          icon: <FiGithub className="w-5 h-5" />,
+          url: 'https://github.com/rasathuraikaran',
+          label: 'GitHub',
+        },
+        {
+          icon: <FiLinkedin className="w-5 h-5" />,
+          url: 'https://linkedin.com/in/karan1999',
+          label: 'LinkedIn',
+        },
+        {
+          icon: <FaStackOverflow className="w-5 h-5" />,
+          url: 'https://stackoverflow.com/users/14732792/rasathurai-karan',
+          label: 'Stack Overflow',
+        },
+        {
+          icon: <SiMedium className="w-5 h-5" />,
+          url: 'https://rasathuraikaran26.medium.com/',
+          label: 'Medium',
+        },
+        {
+          icon: <FaInstagram className="w-5 h-5" />,
+          url: 'https://www.instagram.com/karan_s_r_/',
+          label: 'Instagram',
+        },
+        {
+          icon: <FaFacebook className="w-5 h-5" />,
+          url: 'https://www.facebook.com/rasathurai.karan.1/',
+          label: 'Facebook',
+        },
+        {
+          icon: <SiLeetcode className="w-5 h-5" />,
+          url: 'https://leetcode.com/u/rasathuraikaran26/',
+          label: 'LeetCode',
+        },
+        {
+          icon: <FaCoffee className="w-5 h-5" />,
+          url: 'https://buymeacoffee.com/rasathuraikaran',
+          label: 'Buy Me a Coffee',
+        },
+        {
+          icon: <FiMail className="w-5 h-5" />,
+          url: 'mailto:rasathuraikaran26@gmail.com',
+          label: 'Email',
+        }
+    ];
 
   const footerLinks = [
     { name: 'Home', to: 'hero' },

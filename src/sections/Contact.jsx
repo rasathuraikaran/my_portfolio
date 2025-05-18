@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiLinkedin, FiGithub } from 'react-icons/fi';
-import { FaStackOverflow } from 'react-icons/fa';
-import { SiMedium } from 'react-icons/si';
+import { FaStackOverflow, FaInstagram, FaFacebook, FaCoffee } from 'react-icons/fa';
+import { SiMedium, SiLeetcode } from 'react-icons/si';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,41 +22,28 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission (replace with actual form submission logic)
-    try {
-      // Here you would typically make an API call to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setSubmitStatus({
-        success: true,
-        message: 'Your message has been sent successfully! I will get back to you soon.'
-      });
-      
-      // Reset form
+    const mailToLink = `mailto:rasathuraikaran26@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=Name: ${encodeURIComponent(formData.name)}%0D%0AEmail: ${encodeURIComponent(formData.email)}%0D%0AMessage: ${encodeURIComponent(formData.message)}`;
+    
+    window.location.href = mailToLink;
+    
+    setSubmitStatus({
+      success: true,
+      message: 'Your email client is opening...'
+    });
+    
+    // Clear form after a short delay
+    setTimeout(() => {
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
-      
-      // Clear success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus({ success: null, message: '' });
-      }, 5000);
-      
-    } catch (error) {
-      setSubmitStatus({
-        success: false,
-        message: 'Failed to send message. Please try again later.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+      setSubmitStatus({ success: null, message: '' });
+    }, 2000);
   };
 
   const contactInfo = [
@@ -84,23 +71,48 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: <FiGithub className="w-5 h-5" />,
-      url: 'https://github.com/yourusername',
-      label: 'GitHub'
+      url: 'https://github.com/rasathuraikaran',
+      label: 'GitHub',
     },
     {
       icon: <FiLinkedin className="w-5 h-5" />,
-      url: 'https://linkedin.com/in/yourusername',
-      label: 'LinkedIn'
+      url: 'https://linkedin.com/in/karan1999',
+      label: 'LinkedIn',
     },
     {
       icon: <FaStackOverflow className="w-5 h-5" />,
-      url: 'https://stackoverflow.com/users/youruserid',
-      label: 'Stack Overflow'
+      url: 'https://stackoverflow.com/users/14732792/rasathurai-karan',
+      label: 'Stack Overflow',
     },
     {
       icon: <SiMedium className="w-5 h-5" />,
-      url: 'https://medium.com/@yourusername',
-      label: 'Medium'
+      url: 'https://rasathuraikaran26.medium.com/',
+      label: 'Medium',
+    },
+    {
+      icon: <FaInstagram className="w-5 h-5" />,
+      url: 'https://www.instagram.com/karan_s_r_/',
+      label: 'Instagram',
+    },
+    {
+      icon: <FaFacebook className="w-5 h-5" />,
+      url: 'https://www.facebook.com/rasathurai.karan.1/',
+      label: 'Facebook',
+    },
+    {
+      icon: <SiLeetcode className="w-5 h-5" />,
+      url: 'https://leetcode.com/u/rasathuraikaran26/',
+      label: 'LeetCode',
+    },
+    {
+      icon: <FaCoffee className="w-5 h-5" />,
+      url: 'https://buymeacoffee.com/rasathuraikaran',
+      label: 'Buy Me a Coffee',
+    },
+    {
+      icon: <FiMail className="w-5 h-5" />,
+      url: 'mailto:rasathuraikaran26@gmail.com',
+      label: 'Email',
     }
   ];
 
