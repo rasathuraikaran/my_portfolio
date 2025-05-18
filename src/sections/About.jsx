@@ -37,7 +37,7 @@ const About = () => {
               { label: 'Experience', value: '1+ Years' },
               { label: 'Projects', value: '20+' },
               { label: 'Technologies', value: '15+' },
-              { label: 'Certifications', value: '5+' },
+              { label: 'Certifications', value: '10+' },
             ].map((item, index) => (
               <motion.div
                 key={index}
